@@ -1,0 +1,86 @@
+site: btylerparker.com
+url: 
+author: Tyler Parker
+author:
+  name: Tyler Parker
+  email: btylerparker@gmail.com
+  url: btylerparker.com
+  avatar: 
+title: btylerparker.com
+description: 
+logo: 
+image: 
+twitter: btparker  
+twitter:
+  username: btparker
+  creator: btparker
+  card: summary
+social:
+  name: Tyler Parker
+  
+permalink: pretty
+
+disqus:
+  name: "your disqus username" # required
+  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
+
+baseurl:             ""
+
+include:
+  - _redirects
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - disqus-for-jekyll
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  projects:
+    output: true
+    permalink: /projects/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"     
+      
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
