@@ -1,25 +1,35 @@
+
+
+$colors: #aac5f6, #e5b3e7, #cea8eb;
 html {
   box-sizing: border-box;
   margin:0; 
   padding:0; 
 }
+
+.noise-bg {
+  
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body {
-    background-color: #edf2f7;
+    background-color: #2d2d2d;
+    background-image: url(/assets/images/site/nnnoise.svg);
+    background-repeat: repeat;
+    background-blend-mode: hard-light;
     color: #495057;
 }
 
 header, main {
 	margin: 0 auto;
-    max-width: 50rem;
+  max-width: 60rem;
 }
 .grid {
     display: flex;
     flex-wrap: wrap;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(10rem,auto);
     grid-gap: 1rem
 }
@@ -32,7 +42,14 @@ header, main {
     position: relative;
     margin-left: 1rem;
     margin-right: 1rem;
-    flex: 1 1 10rem
+    flex: 1 1 10rem;
+}
+
+.grid.project {
+  grid-template-columns: 1fr;
+}
+.card.project {
+  min-height: 13rem;
 }
 
 @supports (display:grid) {
@@ -40,44 +57,50 @@ header, main {
         margin: 0
     }
 }
-.card:nth-child(1n) {
-  background: #96d0c3;
-}
-.card:nth-child(2n) {
-  background: #ef7d4d;
-}
-.card:nth-child(3n) {
-  background: #fbcfb9;
-}
-.card:nth-child(4n) {
-  background: #fac14e;
-}
 
-.card:nth-child(5n + 1) {
-  background: #ef7d4d;
+@for $i from 1 through length($colors) {
+  .card:nth-child(#{length($colors)}n+#{$i}) {
+      background: nth($colors, $i)
+  }
 }
+// .card:nth-child(1n) {
+//   background: #96d0c3;
+// }
+// .card:nth-child(2n) {
+//   background: #ef7d4d;
+// }
+// .card:nth-child(3n) {
+//   background: #fbcfb9;
+// }
+// .card:nth-child(4n) {
+//   background: #fac14e;
+// }
 
-.card:nth-child(6n + 1) {
-  background: #ef7d4d;
-}
+// .card:nth-child(5n + 1) {
+//   background: #ef7d4d;
+// }
 
-.card:nth-child(7n +1) {
-  background: #fac14e;
-}
+// .card:nth-child(6n + 1) {
+//   background: #ef7d4d;
+// }
+
+// .card:nth-child(7n +1) {
+//   background: #fac14e;
+// }
 
 
-.card:nth-child(4n + 1) {
-  background: #fac14e;
-}
-.card:nth-child(4n + 2) {
-  background: #fbcfb9;
-}
-.card:nth-child(4n + 3) {
-  background: #ef7d4d;
-}
-.card:nth-child(4n + 4) {
-  background: #96d0c3;
-}
+// .card:nth-child(4n + 1) {
+//   background: #fac14e;
+// }
+// .card:nth-child(4n + 2) {
+//   background: #fbcfb9;
+// }
+// .card:nth-child(4n + 3) {
+//   background: #ef7d4d;
+// }
+// .card:nth-child(4n + 4) {
+//   background: #96d0c3;
+// }
 
 .card {
   //min-height: 100%;
@@ -119,7 +142,7 @@ header, main {
 }
 
 .card .meta {
-   padding: 2rem;
+   padding: 1.5rem 50% 1.5rem 1.5rem;
    display: flex;
   
   flex: 1;
@@ -166,6 +189,8 @@ img {
 }
 
 nav {
+
+    color:#a3a1a2;
     ul {
         list-style: none !important;
         padding: 0;

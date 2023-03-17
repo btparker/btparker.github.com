@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<div class="grid">
+<div class="grid project">
 
   {% for project in site.projects reversed %}
   
-    <article role="article" class="card">
+    <article role="article" class="card project">
 	    <div class="meta">
       <h2><a href="{{ site.baseurl }}{{ project.url }}">
         {{ project.title }}
