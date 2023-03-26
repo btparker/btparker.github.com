@@ -7,7 +7,11 @@ title: Posts
 
   {% for post in site.posts %}
   
-    <article role="article" class="card">
+    <article role="article"
+      onclick="location.href='{{ site.baseurl }}{{ post.url }}';"
+      class="card"
+      style="background-image: url({{site.baseurl}}{{post.image}});"
+    >
 	    <div class="meta">
       <h2><a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
