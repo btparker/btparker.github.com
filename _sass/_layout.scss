@@ -43,6 +43,16 @@ a,a:visited {
     }
   }
 
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+h1 > span.subheading {
+    font-weight: 400;
+}
+
 header,
 main {
     margin: 0 auto;
