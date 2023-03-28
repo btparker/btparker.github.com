@@ -1,0 +1,26 @@
+---
+layout: default
+title: Performances
+---
+
+<div class="grid">
+
+  {% for performance in site.performances %}
+  
+    <article role="article"
+      onclick="location.href='{{ site.baseurl }}{{ performance.url }}';"
+      class="card"
+      style="background-image: url({{site.baseurl}}{{performance.image}});"
+    >
+	    <div class="meta">
+      <h2><a href="{{ site.baseurl }}{{ performance.url }}">
+        {{ performance.title }}
+      </a></h2>
+	    </div>
+  
+    </article>
+    
+  {% endfor %}
+  
+   </div>
+

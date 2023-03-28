@@ -3,4 +3,5 @@ layout: page
 title: About
 ---
 
-## Research Engineer, Theatrical Technologist, and Singer
+## Hello! I'm <span class="emphasis">Tyler Parker</span>, a <span class="emphasis">research engineer</span> and <span class="emphasis">artist</span> based in NYC
+

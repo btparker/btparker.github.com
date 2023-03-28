@@ -1,4 +1,4 @@
-$colors: #9bb8ed, #dca0de, #ad90e9;
+$colors: #9bb8ed, #dca0de, #ad90e9, #e9af90;
 
 $dark-bg: #262626;
 $dark-font-color:  #3b3b3b;
@@ -32,7 +32,7 @@ body {
     background-color: $dark-bg;
     color: $dark-font-color;
     font-family: 'Roboto', sans-serif;
-    background-image: url(/assets/images/site/nnnoise.svg);
+    background-image: url(/assets/images/nnnoise.svg);
 }
 
 a,a:visited {
@@ -52,6 +52,8 @@ h1 {
 h1 > span.subheading {
     font-weight: 400;
 }
+
+
 
 header,
 main {
@@ -298,7 +300,11 @@ footer {
         $adjustedColor: adjust-color($color, $saturation: 30%);
         color: $adjustedColor;
     }
-    
+
+    h2 > span.emphasis:nth-child(#{length($colors)}n+#{$i}) {
+        $adjustedColor: adjust-color($color, $saturation: 30%);
+        color: $adjustedColor;
+    }
 }
 
 $numAngles: 20;

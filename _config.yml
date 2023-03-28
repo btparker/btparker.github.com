@@ -54,6 +54,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:slug
+  performances:
+    output: true
+    permalink: /performances/:slug
   
 defaults:
   -
@@ -78,8 +81,13 @@ defaults:
       path: ""
       type: "projects"
     values:
-      layout: "project"     
-      
+      layout: "project"    
+  -
+    scope:
+      path: ""
+      type: "performances"
+    values:
+      layout: "performance"     
   - scope:
       path: "assets/images"
     values:

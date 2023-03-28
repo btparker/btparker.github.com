@@ -10,7 +10,6 @@ layout: default
     <span class="subheading"> {{ page.subheading }}</span>
     {% endif %}
   </h1>
-  <img id="featured-image" src="{{ page.image }}"/>
   <div class="meta">
   {{ content }}
   <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y" }} &middot; {{ page.category }}</time>
