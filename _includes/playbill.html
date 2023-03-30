@@ -1,0 +1,46 @@
+<article class="playbill">
+    <div class="playbill-header"
+        style="background-image: url('{{include.image}}'); background-color: {{include.accent_color}}">
+        <h1 class="playbill-title">{{include.title}}</h1>
+        <!-- <p>{{ include.accent_color }}</p> -->
+        {% if include.subtitle %}
+        <h3 class="playbill-subtitle">{{include.subtitle}}</h3>
+        {% endif %}
+    </div>
+    <div class="playbill-body">
+        <div class="playbill-info">
+            <div class="playbill-role-announcement">
+                <h3 class="playbill-role-pre">The role of</h3>
+                <h1 class="playbill-role">{{include.role}}</h1>
+                <h4 class="playbill-role-post">performed by Tyler Parker</h4>
+            </div>
+            <ul class="playbill-details">
+                <li><strong>Presented by</strong></li>
+                <li>{{include.company}}</li>
+                <li>-</li>
+                <li><strong>{{include.theater}}</strong></li>
+                <li>{{include.address}}</li>
+                <li>-</li>
+                <li><strong>{{ include.start_date | date: "%B %-d" }} - {{ include.end_date | date: "%-d, %Y" }}</strong></li>
+            </ul>
+        </div>
+        <div>
+            {{include.content}}
+        </div>
+        <div class="playbill-url">
+            <a href="{{include.show_url}}">For tickets and more information, click here!</a>
+        </div>
+        <div class="playbill-showings">
+            <div class="playbill-showings-carousel">
+                {% for showing in include.showings %}
+                <div class="playbill-showings-item" onclick="location.href='{{ showing.url }}';">
+                    <div class="playbill-showings-item__header" style="background-color: {{include.accent_color}};">{{showing.date | date: "%B %-d" }}</div>
+                    <div class="playbill-showings-item__time-of-day">{{showing.tod}}</div>
+                    <div class="playbill-showings-item__time">{{showing.time}}</div>
+                    <div class="playbill-showings-item__tickets"><a href="{{showing.url}}" style="color: {{include.accent_color}};">Tickets here</a></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</article>

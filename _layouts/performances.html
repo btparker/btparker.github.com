@@ -4,23 +4,47 @@ title: Performances
 ---
 
 <div class="grid">
+  <!-- CURRENT PERFORMANCE(S) -->
+  {% assign current_performances = site.performances | where: 'status', 'current' %}
+  {% for current_performance in current_performances %}
+    {% include playbill.html
+      title=current_performance.title
+      subtitle=current_performance.subtitle
+      show_url=current_performance.show_url
+      role=current_performance.role
+      company=current_performance.company
+      address=current_performance.address
+      accent_color=current_performance.accent_color
+      theater=current_performance.theater
+      start_date=current_performance.start_date
+      end_date=current_performance.end_date
+      image=current_performance.image
+      showings=current_performance.showings
+    %}
 
-  {% for performance in site.performances %}
-  
-    <article role="article"
-      onclick="location.href='{{ site.baseurl }}{{ performance.url }}';"
-      class="card"
-      style="background-image: url({{site.baseurl}}{{performance.image}});"
-    >
-	    <div class="meta">
-      <h2><a href="{{ site.baseurl }}{{ performance.url }}">
-        {{ performance.title }}
-      </a></h2>
-	    </div>
-  
-    </article>
-    
   {% endfor %}
-  
-   </div>
-
+  <!-- UPCOMING PERFORMANCES -->
+  {% assign upcoming_performances = site.performances | where: 'status', 'upcoming' %}
+  {% for upcoming_performance in upcoming_performances %}
+  <article role="article" onclick="location.href='{{ site.baseurl }}{{ performance.url }}';" class="card performance"
+    style="background-image: url({{site.baseurl}}{{performance.image}});">
+    <div class="meta">
+      <h2><a href="{{ site.baseurl }}{{ performance.url }}">
+          {{ performance.title }}
+        </a></h2>
+    </div>
+  </article>
+  {% endfor %}
+  <!-- PAST PERFORMANCES -->
+  {% assign past_performances = site.performances | where: 'status', 'past' %}
+  {% for past_performance in past_performances %}
+  <article role="article" onclick="location.href='{{ site.baseurl }}{{ performance.url }}';" class="card performance"
+    style="background-image: url({{site.baseurl}}{{performance.image}});">
+    <div class="meta">
+      <h2><a href="{{ site.baseurl }}{{ performance.url }}">
+          {{ performance.title }}
+        </a></h2>
+    </div>
+  </article>
+  {% endfor %}
+</div>
