@@ -493,7 +493,7 @@ $numAngles: 20;
                 background-color: rgba(255, 255, 255, 0.8);
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-start;
+                justify-content: center;
                 padding: 20px;
                 width: 100%;
                 column-gap: 20px;
@@ -549,10 +549,6 @@ $numAngles: 20;
                             }
                         }
                     }
-                }
-
-                .playbill-showings-item:nth-child(3n+3) {
-                    margin-right: 0;
                 }
             }
         }
