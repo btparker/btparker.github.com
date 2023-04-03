@@ -1,6 +1,6 @@
 <article class="playbill">
     <div class="playbill-header"
-        style="background-image: url('{{include.image}}'); background-color: {{include.accent_color}}">
+        style="background-image: url('{{include.image}}'); background-color: {{include.accent_color}};">
         <h1 class="playbill-title">{{include.title}}</h1>
         <!-- <p>{{ include.accent_color }}</p> -->
         {% if include.subtitle %}
@@ -20,8 +20,12 @@
                 <li>-</li>
                 <li><strong>{{include.theater}}</strong></li>
                 <li>{{include.address}}</li>
-                <li>-</li>
+                <li>-</li>  
+                {% if include.start_date == include.end_date %}
+                <li><strong>{{ include.start_date | date: "%B %-d, %Y" }}</strong></li>
+                {% else %}
                 <li><strong>{{ include.start_date | date: "%B %-d" }} - {{ include.end_date | date: "%-d, %Y" }}</strong></li>
+                {% endif %}
             </ul>
         </div>
         <div>

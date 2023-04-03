@@ -5,6 +5,8 @@ $light-bg-color: rgb(233, 232, 232);
 $dark-font-color: rgb(59, 59, 59);
 $light-font-color: rgb(227, 227, 227);
 
+$gap-size: 20px;
+
 // SITE
 
 html {
@@ -76,7 +78,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: minmax(10rem, auto);
-    grid-gap: 1rem;
+    grid-gap: $gap-size;
 }
 
 ul,
@@ -369,7 +371,7 @@ $numAngles: 20;
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     padding: 0px;
 
     .playbill-header {
@@ -420,7 +422,8 @@ $numAngles: 20;
             font-size: 1.5rem;
             margin: 0;
             font-family: inherit;
-            color: $dark-font-color;
+            color: $light-font-color;
+            text-shadow: 1px 1px $dark-bg-color;
             z-index: 1;
         }
     }
@@ -430,7 +433,7 @@ $numAngles: 20;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        row-gap: 20px;
+        row-gap: $gap-size;
         background-color: $light-bg-color;
         padding: 2rem;
 
@@ -441,7 +444,7 @@ $numAngles: 20;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            row-gap: 3rem;
+            row-gap: $gap-size;
 
             .playbill-role-announcement {
                 display: flex;

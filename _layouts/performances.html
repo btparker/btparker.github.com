@@ -3,8 +3,9 @@ layout: default
 title: Performances
 ---
 
-<div class="grid">
+
   <!-- CURRENT PERFORMANCE(S) -->
+
   {% assign current_performances = site.performances | where: 'status', 'current' %}
   {% for current_performance in current_performances %}
     {% include playbill.html
@@ -23,15 +24,18 @@ title: Performances
     %}
 
   {% endfor %}
+  <div class="grid">
   <!-- UPCOMING PERFORMANCES -->
   {% assign upcoming_performances = site.performances | where: 'status', 'upcoming' %}
+  
   {% for upcoming_performance in upcoming_performances %}
-  <article role="article" onclick="location.href='{{ site.baseurl }}{{ performance.url }}';" class="card performance"
-    style="background-image: url({{site.baseurl}}{{performance.image}});">
+  <article role="article" onclick="location.href='{{ site.baseurl }}{{ upcoming_performance.url }}';" class="card performance"
+    style="background-image: url({{site.baseurl}}{{upcoming_performance.image}});">
     <div class="meta">
-      <h2><a href="{{ site.baseurl }}{{ performance.url }}">
-          {{ performance.title }}
-        </a></h2>
+      <h2><a href="{{ site.baseurl }}{{ upcoming_performance.url }}">
+          {{ upcoming_performance.title }}
+        </a>
+      </h2>
     </div>
   </article>
   {% endfor %}
