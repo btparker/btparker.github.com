@@ -163,6 +163,32 @@ nav {
         z-index: 100;
     }
 
+    $hover-delay: 0.00s;
+    $hover-duration: 0.35s;
+
+    .hover-effect {
+        background-color: rgba(0,0,0,0);
+        background-blend-mode: normal;
+        transition: background-color background-blend-mode $hover-duration ease-in-out;
+
+        &:hover {
+            animation: hover-effect-animation $hover-duration ease-in-out $hover-delay forwards;
+        }
+    }
+
+    @keyframes hover-effect-animation {
+        0% {
+            background-color: rgba(0,0,0,0);
+
+            background-blend-mode: normal;
+        }
+        100% {
+            background-color: rgba(0,0,0,0.65);
+            background-blend-mode: multiply;
+        }
+    }
+
+
     .thumb {
         padding-bottom: 60%;
         background-size: cover;
@@ -196,6 +222,11 @@ nav {
         flex: 1;
         justify-content: end;
         flex-direction: column;
+        padding: 10px;
+        transition: background-color $hover-duration ease-in-out;
+        &:hover {
+            animation: hover-effect-animation $hover-duration ease-in-out $hover-delay forwards;
+        }
     }
 
     &:after {
@@ -212,7 +243,7 @@ nav {
 
     &:hover {
         transform: scale(1.02);
-        color: rgb(231, 231, 231);
+        color: $light-font-color;
     }
 
     &:hover:after {
@@ -351,7 +382,7 @@ $numAngles: 20;
 
     .project>.card:nth-child(#{$numAngles}n+#{$i}) {
         $angle: randomAngle();
-        $randPos: randomNumber(35, 45);
+        $randPos: randomNumber(55,65);
         $pos: percentage($randPos / 100);
         $pad: percentage((100 - $randPos) / 100);
 
