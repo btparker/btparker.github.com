@@ -39,16 +39,17 @@ title: Performances
     </div>
   </article>
   {% endfor %}
-  <!-- PAST PERFORMANCES -->
+  <!-- PAST PERFORMANCES
   {% assign past_performances = site.performances | where: 'status', 'past' %}
   {% for past_performance in past_performances %}
-  <article role="article" onclick="location.href='{{ site.baseurl }}{{ performance.url }}';" class="card performance"
-    style="background-image: url({{site.baseurl}}{{performance.image}});">
+  <article role="article" onclick="location.href='{{ site.baseurl }}{{ past_performance.url }}';" class="card performance"
+    style="background-image: url({{site.baseurl}}{{past_performance.image}}); background-color: {{ past_performance.accent_color }}">
     <div class="meta">
-      <h2><a href="{{ site.baseurl }}{{ performance.url }}">
-          {{ performance.title }}
+      <h2><a href="{{ site.baseurl }}{{ past_performance.url }}">
+          {{ past_performance.title }}
+          
         </a></h2>
     </div>
   </article>
-  {% endfor %}
+  {% endfor %} -->
 </div>
