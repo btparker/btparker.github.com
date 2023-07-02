@@ -50,12 +50,6 @@ Even though the topic is a more literal adherence to choregraphy rather than dan
 
 Thank you for the consideration.
 
-## Collaboration
-
-As mentioned in my motivation, I am incredibly eager to have any of my technical experience (or, less likely, my performing arts experience) be useful at the CCL.
-
-If my project were green-lit, I would be eager to collaborate with anyone who is also in the vocal performing art space, if possible. In general, I would want help to make sure the generated dataset is well designed so that it can be useful. The last component, the "interactive agent of this model that serves as a tool / art piece", I am very open to suggestion and collaboration and would be particularly interested in a interactive VR or web application (or both, with WebXR).
-
 ## Qualifications
 
 - Machine Learning / Computer Vision / Synthetic Data, with specific experience in their application to 3D animated human avatars
@@ -64,3 +58,9 @@ If my project were green-lit, I would be eager to collaborate with anyone who is
 - Web Interactives (P5.js, WebXR)
 - Interactive Installation / Performance (openFrameworks)
 - Singing (Opera/Musical)
+
+## Collaboration
+
+As mentioned in my motivation, I am incredibly eager to have any of my technical experience (or, less likely, my performing arts experience) be useful at the CCL.
+
+If my project were green-lit, I would be eager to collaborate with anyone who is also in the vocal performing art space, if possible. In general, I would want help to make sure the generated dataset is well designed so that it can be useful. The last component, the "interactive agent of this model that serves as a tool / art piece", I am very open to suggestion and collaboration and would be particularly interested in a interactive VR or web application (or both, with WebXR).
