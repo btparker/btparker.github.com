@@ -3,6 +3,8 @@ layout: page
 title: Fleischer Setback Camera - Digital Reconstruction
 ---
 
+# Fleischer Setback Camera - Digital Reconstruction
+
 Hello! I am a research engineer and traditional animation enthusiast, working on virtually resurrecting the Fleischer Studios "Stereoptical Process" using modern 3D scanning and computer graphics techniques to digitally reconstruct the rotating sets used in the Fleischer animated shorts. My aim is to enable novel ways to interact with and explore this piece of animation history.
 
 My first rough proof of concept is [from a segment in "Popeye the Sailor Meets Sindbad the Sailor (1936)"](https://www.instagram.com/reel/Cwf-QfNs09N/), where Popeye enters and walks through a cave. Even though I used a small crop of a relatively low resolution video, I was able to obtain a rudimentary point cloud (estimated 3D points in space) and a "NeRF" (neural radiance field, a sort of AI dream of a 3D scene):
